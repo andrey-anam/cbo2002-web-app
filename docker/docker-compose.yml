@@ -7,6 +7,7 @@ services:
       dockerfile: docker/Dockerfile
     environment:
       - NODE_ENV=production
+      - VITE_API_URL=https://cbo2002.analiseops.com.br
     ports:
-      - "8080:8080"
+      - "4173:4173"
     restart: unless-stopped
