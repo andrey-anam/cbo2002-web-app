@@ -1,0 +1,8 @@
+.env.*
+.gitignore
+.nvmrc
+README.*
+k8s
+dist
+node_modules
+.git

@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
