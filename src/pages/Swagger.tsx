@@ -21,7 +21,7 @@ const CBOApiDocs = () => {
   useEffect(() => {
     const fetchSwaggerData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL ||'http://localhost:8888'}/api/docs.json`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL ||'https://cbo2002.analiseops.com.br'}/api/docs.json`, {
           headers: {
             "Cache-Control": "no-store",
             "Content-Type": "application/json"
@@ -503,7 +503,7 @@ const CBOApiDocs = () => {
             setLoadingRequest(true);
             try {
               // Construir URL com parâmetros
-              let url = `${import.meta.env.VITE_API_URL || "http://localhost:8888"}${servers[0].url}${selectedEndpoint.path}`;
+              let url = `${import.meta.env.VITE_API_URL || "https://cbo2002.analiseops.com.br"}${servers[0].url}${selectedEndpoint.path}`;
 
               // Substituir parâmetros de path
               Object.entries(requestParams).forEach(([key, value]: [key: string, value: any]) => {

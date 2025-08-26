@@ -7,7 +7,7 @@ export interface ApiError {
   code?: string;
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8888';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cbo2002.analiseops.com.br';
 
 class ApiClient {
   private instance: AxiosInstance;
