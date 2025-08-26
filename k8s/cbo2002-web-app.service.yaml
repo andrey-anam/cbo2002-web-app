@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cbo2002-web-app-service
+  namespace: cbo2002
+  labels:
+    app: cbo2002-web-app
+spec:
+  type: NodePort
+  selector:
+    app: cbo2002-web-app
+  ports:
+    - name: http
+      port: 80        # Porta pelo qual o Service expõe no cluster
+      targetPort: 4173 # Porta do container (mesma do Deployment)
+      nodePort: 30473
+      protocol: TCP
